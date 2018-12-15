@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+typealias APIParams = [String: Any]?
