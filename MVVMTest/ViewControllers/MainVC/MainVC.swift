@@ -19,17 +19,21 @@ class MainVC: UIViewController {
     weak var tableView: UITableView!
     //MARK: - Private Variables
     
+    private var mainVCViewModel = MainVCViewModel()
+    
     //MARK: - Internal Variables
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         prepareUI()
         
-        searchView.backgroundColor = UIColor.red
-        searchField.backgroundColor = UIColor.green
-        searchBtn.backgroundColor = UIColor.blue
+        mainVCViewModel.reloadImagesList = {[weak self] in
+            guard let StrongSelf = self else { return }
+            StrongSelf.tableView.reloadData()
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -77,6 +81,11 @@ class MainVC: UIViewController {
             ])
         
         searchBtn = sButton
+
+        searchBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        searchBtn.setTitleColor(UIColor(red: 0.22, green: 0.33, blue: 0.53, alpha: 1), for: .normal)
+        searchBtn.setTitle("Search", for: .normal)
+        searchBtn.addTarget(self, action: #selector(searchImage), for: .touchUpInside)
     }
     
     private func addSearchField() {
@@ -93,6 +102,7 @@ class MainVC: UIViewController {
             ])
         
         searchField = sTField
+        searchField.borderStyle = .roundedRect
     }
     
     private func addTableView() {
@@ -109,8 +119,14 @@ class MainVC: UIViewController {
             ])
         
         tableView = tView
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
+    @objc private func searchImage(){
+        mainVCViewModel.searchImages(str: searchField.text!)
+    }
     //MARK: - Internal Functions
     
 }
@@ -118,7 +134,7 @@ class MainVC: UIViewController {
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return mainVCViewModel.ImageItemArray != nil ? mainVCViewModel.ImageItemArray!.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

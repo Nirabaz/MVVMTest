@@ -25,19 +25,20 @@ public struct JSONCodingKeys: CodingKey {
 
 extension KeyedDecodingContainer {
     
+    
     func decode(_ type: [ImageItemML].Type, forKey key: K) throws -> [ImageItemML] {
         
-        var messagesArray = [ImageItemML]()
+        var imagesArray = [ImageItemML]()
         var container = try self.nestedUnkeyedContainer(forKey: key)
         while !container.isAtEnd {
-            if let message = try? container.decode(ImageItemML.self) {
-                messagesArray.append(message)
+            if let image = try? container.decode(ImageItemML.self) {
+                imagesArray.append(image)
             } else {
                 // <-- TRICK
             }
         }
         
-        return messagesArray
+        return imagesArray
     }
     
     func decode(_ type: [[String: Any]].Type, forKey key: K) throws -> [[String: Any]] {

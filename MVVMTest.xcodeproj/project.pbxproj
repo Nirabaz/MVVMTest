@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59267C3921C695F500CC41D6 /* PixabayAnswerML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59267C3821C695F400CC41D6 /* PixabayAnswerML.swift */; };
 		59BFC99821C2EBF600977B03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFC99721C2EBF600977B03 /* AppDelegate.swift */; };
 		59BFC99A21C2EBF600977B03 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFC99921C2EBF600977B03 /* MainVC.swift */; };
 		59BFC99F21C2EC3E00977B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59BFC99E21C2EC3E00977B03 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59267C3821C695F400CC41D6 /* PixabayAnswerML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAnswerML.swift; sourceTree = "<group>"; };
 		59BFC99421C2EBF600977B03 /* MVVMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BFC99721C2EBF600977B03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59BFC99921C2EBF600977B03 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59267C3721C695A200CC41D6 /* PixabayAnswerML */ = {
+			isa = PBXGroup;
+			children = (
+				59267C3821C695F400CC41D6 /* PixabayAnswerML.swift */,
+			);
+			path = PixabayAnswerML;
+			sourceTree = "<group>";
+		};
 		59BFC98B21C2EBF500977B03 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		59CCD1FA21C454B000C232A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59267C3721C695A200CC41D6 /* PixabayAnswerML */,
 				59CCD20121C4888B00C232A9 /*  ImageItemML */,
 			);
 			path = Models;
@@ -227,6 +238,7 @@
 				59CCD20B21C48B3E00C232A9 /* Types.swift in Sources */,
 				59CCD20921C48A5A00C232A9 /* ExtCoding.swift in Sources */,
 				59BFC99821C2EBF600977B03 /* AppDelegate.swift in Sources */,
+				59267C3921C695F500CC41D6 /* PixabayAnswerML.swift in Sources */,
 				59CCD1FE21C4559E00C232A9 /* MainVCViewModel.swift in Sources */,
 				59CCD20D21C48B4B00C232A9 /* Constants.swift in Sources */,
 			);
