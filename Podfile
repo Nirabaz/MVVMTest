@@ -10,5 +10,6 @@ target 'MVVMTest' do
   pod 'RealmSwift'
   pod 'ReachabilitySwift'
   pod 'JGProgressHUD'
-
+  pod 'Kingfisher', '~> 4.0'
+  
 end

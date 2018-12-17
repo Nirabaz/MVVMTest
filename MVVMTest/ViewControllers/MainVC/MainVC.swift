@@ -125,7 +125,7 @@ class MainVC: UIViewController {
     }
     
     @objc private func searchImage(){
-        mainVCViewModel.searchImages(str: searchField.text!)
+        mainVCViewModel.searchImages(str: searchField.text!, viewForProgressHud: self.view)
     }
     //MARK: - Internal Functions
     

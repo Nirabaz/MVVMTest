@@ -1,30 +1,34 @@
 PODS:
   - JGProgressHUD (2.0.3)
+  - Kingfisher (4.10.1)
   - ReachabilitySwift (4.3.0)
-  - Realm (3.12.0):
-    - Realm/Headers (= 3.12.0)
-  - Realm/Headers (3.12.0)
-  - RealmSwift (3.12.0):
-    - Realm (= 3.12.0)
+  - Realm (3.13.0):
+    - Realm/Headers (= 3.13.0)
+  - Realm/Headers (3.13.0)
+  - RealmSwift (3.13.0):
+    - Realm (= 3.13.0)
 
 DEPENDENCIES:
   - JGProgressHUD
+  - Kingfisher (~> 4.0)
   - ReachabilitySwift
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - JGProgressHUD
+    - Kingfisher
     - ReachabilitySwift
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
   JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
-  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
-  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
+  RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
 
-PODFILE CHECKSUM: d97bb197ea4db76e5bf0b294b26829709159da1d
+PODFILE CHECKSUM: 337b4f47e5b266160137431a9073fbea169f968c
 
 COCOAPODS: 1.5.3
